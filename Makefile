@@ -1,5 +1,6 @@
-CFLAGS=-Wall -g
+# make clean all #cleans and rebuilds everything
 
+CFLAGS=-Wall -g
 
 all:
 	cc $(CFLAGS) ex1.c -o ex1
