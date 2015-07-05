@@ -1,11 +1,11 @@
-#include <stdio.h> // REMEMBER .h
+#include <stdio.h>
 
 int main (){
 	int age = 23;
 	int height = 178;
 
-	printf("I am %d years old.\n", age); // REMEMBER ; 
-	printf("And %d cm tall.\n", height); // REMEMBER ;
+	printf("I am %-10d years old.\n", age); 
+	printf("And  %10d cm tall.\n", height);
 
-	return 0; // REMEMBER to return
+	return 0;
 }
