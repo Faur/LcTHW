@@ -23,11 +23,10 @@ struct Connection {
 	struct Database *db;
 };
 
-void die(const char *message)
+void die(const char *message){
 // Simple error script. Prints message and terminates the program,
 // unsless another function has thrown an error then this error is 
 // printed. REQUIRES <errno.h>
-{
 	if(errno) 
 	{
 		perror(message);
