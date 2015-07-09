@@ -39,6 +39,14 @@ void Person_print(struct Person *who)
 	printf("\tWeight: %d\n", who->weight);
 }
 
+void Person_print_2(struct Person who)
+{
+	printf("Name: %s\n", who.name);
+	printf("\tAge: %d\n", who.age);
+	printf("\tHeight: %d\n", who.height);
+	printf("\tWeight: %d\n", who.weight);
+}
+
 int main(int argc, char *argv[])
 {
 	// make two people structs
@@ -46,8 +54,14 @@ int main(int argc, char *argv[])
 		"Joe Alex", 32, 64, 140);
 	struct Person *frank = Person_create(
 		"Frank Blank", 20, 72, 180);
+	struct Person toke = {.name="Toke Faurby", .height=178, .age=23, .weight=75};
+		// Ordering is irellevant
+		// Doesn't need manual delete
 
 	// print them
+	printf("Toke is at memory location: %p\n", &toke);
+	Person_print_2(toke);
+
 	printf("Joe is at memory location %p:\n", joe);
 	Person_print(joe);
 
