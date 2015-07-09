@@ -3,7 +3,7 @@
 !*.md
 !LICENSE
 !Makefile
-
+!*test*
 
 # # Object files
 # *.o
