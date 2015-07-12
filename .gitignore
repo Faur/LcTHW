@@ -1,9 +1,14 @@
 *
+
 !*.c
 !*.md
 !LICENSE
 !Makefile
 !*.sh
+
+#Don't ignore folders
+!*/
+valgrind-3.10.1/
 
 # # Object files
 # *.o
