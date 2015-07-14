@@ -11,6 +11,35 @@ int read_string(char **out_string, int max_buffer){
     *out_string = calloc(1, max_buffer + 1);
     check_mem(*out_string);
 
+    // char *result = fgets(*out_string, max_buffer, stdin);
+    // check(result != NULL, "Input error.");
+
+	char ch;
+	int i = 0;
+
+	// while(1) {
+    for(i = 0; i < max_buffer; i++){
+		ch = fgetc(stdin);
+		if(ch == '\n' || ch == '\0') break;
+		(*out_string)[i] = ch;
+		printf("%d\n", i);
+			// PROBLEM!
+	}
+	// out_string[i] = '\0';
+	out_string[max_buffer] = '\0';
+
+    return 0;
+
+error:
+    if(*out_string) free(*out_string);
+    *out_string = NULL;
+    return -1;
+}
+
+int read_string2(char **out_string, int max_buffer){
+    *out_string = calloc(1, max_buffer + 1);
+    check_mem(*out_string);
+
     char *result = fgets(*out_string, max_buffer, stdin);
     check(result != NULL, "Input error.");
 
